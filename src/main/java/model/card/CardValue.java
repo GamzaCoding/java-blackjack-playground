@@ -1,4 +1,4 @@
-package model;
+package model.card;
 
 public enum CardValue {
     TOW("2"),

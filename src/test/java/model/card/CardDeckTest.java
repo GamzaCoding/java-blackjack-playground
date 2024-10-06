@@ -1,5 +1,7 @@
-import model.Card;
-import model.CardDeck;
+package model.card;
+
+import model.card.Card;
+import model.card.CardDeck;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;

@@ -1,4 +1,6 @@
-package model;
+package model.card;
+
+import model.card.Card;
 
 import java.util.List;
 

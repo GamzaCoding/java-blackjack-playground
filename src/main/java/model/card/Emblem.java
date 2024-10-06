@@ -1,4 +1,4 @@
-package model;
+package model.card;
 
 public enum Emblem {
     SPADE("스페이드"),
