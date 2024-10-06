@@ -17,7 +17,7 @@ public class PlayerTest {
     @Test
     @DisplayName("마이너스 예산 예외발생 테스트")
     public void minus(){
-        assertThatThrownBy(() -> player.settingBettingResult(-100))
+        assertThatThrownBy(() -> player.setBettingResult(-100))
                 .isInstanceOf(IllegalArgumentException.class)
                 .hasMessage(Player.MINUS_AMOUNT);
     }

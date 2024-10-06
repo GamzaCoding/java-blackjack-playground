@@ -10,7 +10,7 @@ public class Player {
         this.name = name;
         this.amount = amount;
     }
-    public Player settingBettingResult(int resultAmount){
+    public Player setBettingResult(int resultAmount){
         return new Player(this.name, resultAmount);
     }
     public int getAmount() {
