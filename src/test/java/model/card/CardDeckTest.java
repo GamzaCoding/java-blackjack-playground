@@ -13,7 +13,7 @@ public class CardDeckTest {
 
     private CardDeck cardDeck;
     @BeforeEach
-    public void setting(){
+    public void setUp(){
         this.cardDeck = new CardDeck();
     }
     @Test

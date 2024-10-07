@@ -2,6 +2,7 @@ package model.card;
 
 import model.card.Card;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Cards {
@@ -9,13 +10,14 @@ public class Cards {
     private List<Card> cards;
 
     public Cards() {
-        this.cards = cardsInit();
+        this.cards = new ArrayList<>();
     }
 
-    private List<Card> cardsInit() {
-
-        return null;
+    public void setCards(Card card) {
+        cards.add(card);
     }
 
-
+    public int size(){
+        return cards.size();
+    }
 }

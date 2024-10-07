@@ -10,8 +10,8 @@ public class PlayerTest {
 
     private Player player;
     @BeforeEach
-    public void setting(){
-        this.player = new Player("hyeongSeok", 10000);
+    public void setUP(){
+        this.player = new Player("seok", 10000);
     }
 
     @Test
