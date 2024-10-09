@@ -1,6 +1,6 @@
 package model.card;
 
-public enum CardValue {
+public enum Value {
     TOW("2"),
     THREE("3"),
     FOUR("4"),
@@ -10,13 +10,13 @@ public enum CardValue {
     EIGHT("8"),
     NINE("9"),
     TEN("10"),
-    JACK("11"),
-    QUEEN("11"),
-    KING("11"),
+    JACK("10"),
+    QUEEN("10"),
+    KING("10"),
     ACE("1");
 
     private final String value;
-    private CardValue(String value){
+    private Value(String value){
         this.value = value;
     }
     public String getValue() {

@@ -1,5 +1,6 @@
 package controller;
 
+import model.Amount;
 import model.Player;
 import model.card.CardDeck;
 import org.junit.jupiter.api.BeforeAll;
@@ -19,8 +20,8 @@ public class GameStageTest {
     @BeforeEach
     public void setUp(){
         gameStage = new GameStage(new CardDeck(),
-                Arrays.asList(new Player("minsu",1000),
-                        new Player("souji",2000)));
+                Arrays.asList(new Player("minsu",new Amount(10000)),
+                        new Player("souji",new Amount(20000))));
     }
 
     @Test

@@ -1,41 +1,37 @@
 package model;
-
 import model.card.CardDeck;
 import model.card.Cards;
+import model.card.Name;
 
 public class Player {
-    public static final String MINUS_AMOUNT = "소유 금액이 0보다 작습니다.";
+    private final Name name;
+    private final Amount amount;
+    private final Hand hand;
 
-    private final String name;
-    private final int amount;
-    private Cards playerCards;
-
-    public Player(String name, int amount){
-        validateAmount(amount);
-        this.name = name;
+    public Player(String name, Amount amount){
+        this.name = new Name(name);
         this.amount = amount;
-        playerCards = new Cards();
+        this.hand = new Hand(new Cards()); // 이렇게 해도 되나...
     }
-    public Player setBettingResult(int resultAmount){
-        return new Player(this.name, resultAmount);
+
+    public Player setBettingResult(Amount resultAmount){
+        return new Player(name.getName(), resultAmount);  // 이렇게 하면 hand가 이어지지 않음...
     }
 
     public void drawTowCard(CardDeck cardDeck) {
-        playerCards.setCards(cardDeck.draw());
-        playerCards.setCards(cardDeck.draw());
+        hand.add(cardDeck.draw());
+        hand.add(cardDeck.draw());
+    }
+
+    public void drawOneCard(CardDeck cardDeck){
+        hand.add(cardDeck.draw());
     }
 
     public int getAmount() {
-        return amount;
+        return amount.getAmount();
     }
 
-    public Cards getPlayerCards() {
-        return playerCards;
-    }
-
-    private void validateAmount(int amount) {
-        if(amount < 0){
-            throw new IllegalArgumentException(MINUS_AMOUNT);
-        }
+    public Hand getPlayerCards() {
+        return hand;
     }
 }

@@ -4,18 +4,17 @@ import java.util.Objects;
 
 public class Card {
     private final Emblem emblem;
-    private final CardValue value;
-
-    public Card(Emblem emblem, CardValue value){
+    private final Value value;
+    public Card(Emblem emblem, Value value){
         this.emblem = emblem;
         this.value = value;
     }
 
-    public CardValue getValue(){
+    public Value getValue(){
         return value;
     }
 
-    public static Card of(Emblem emblem, CardValue value){
+    public static Card of(Emblem emblem, Value value){
         return new Card(emblem, value);
     }
 

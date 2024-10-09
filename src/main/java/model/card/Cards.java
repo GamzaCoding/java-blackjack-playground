@@ -13,7 +13,7 @@ public class Cards {
         this.cards = new ArrayList<>();
     }
 
-    public void setCards(Card card) {
+    public void addCard(Card card) {
         cards.add(card);
     }
 
