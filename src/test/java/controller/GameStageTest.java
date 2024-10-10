@@ -1,9 +1,8 @@
 package controller;
 
-import model.Amount;
-import model.Player;
+import model.gamer.Amount;
+import model.gamer.Player;
 import model.card.CardDeck;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;

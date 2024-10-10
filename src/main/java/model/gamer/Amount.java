@@ -1,8 +1,8 @@
-package model;
+package model.gamer;
 
 public class Amount {
     public static final String MINUS_AMOUNT = "0 이하의 금액은 불가능합니다.";
-    private int amount;
+    private final int amount;
     public Amount(int amount){
         validateAmount(amount);
         this.amount = amount;
@@ -11,6 +11,10 @@ public class Amount {
         if(amount < 0){
             throw new IllegalArgumentException(MINUS_AMOUNT);
         }
+    }
+
+    public Amount addRevenue(int revenue){
+        return new Amount(amount + revenue);
     }
 
     public int getAmount() {

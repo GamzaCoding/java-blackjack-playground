@@ -1,4 +1,4 @@
-package model;
+package model.gamer;
 
 import model.card.Card;
 import model.card.Cards;
@@ -12,6 +12,11 @@ public class Hand {
     public void add(Card card){
         cards.addCard(card);
     }
+
+    public Cards getCards() {
+        return cards;
+    }
+
     public int size(){
         return cards.size();
     }

@@ -1,7 +1,6 @@
-package model;
+package model.gamer;
 import model.card.CardDeck;
 import model.card.Cards;
-import model.card.Name;
 
 public class Player {
     private final Name name;
@@ -14,8 +13,15 @@ public class Player {
         this.hand = new Hand(new Cards()); // 이렇게 해도 되나...
     }
 
-    public Player setBettingResult(Amount resultAmount){
-        return new Player(name.getName(), resultAmount);  // 이렇게 하면 hand가 이어지지 않음...
+    private Player(Name name, Amount resultAmount, Hand hand){
+        this.name = name;
+        this.amount = resultAmount;
+        this.hand = hand;
+    }
+
+    public Player setBettingResult(int revenue){
+        Amount total = amount.addRevenue(revenue);
+        return new Player(name, total, hand);
     }
 
     public void drawTowCard(CardDeck cardDeck) {
@@ -31,7 +37,7 @@ public class Player {
         return amount.getAmount();
     }
 
-    public Hand getPlayerCards() {
-        return hand;
+    public Cards getPlayerCards() {
+        return hand.getCards();
     }
 }

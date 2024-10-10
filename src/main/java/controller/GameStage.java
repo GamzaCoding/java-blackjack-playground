@@ -1,6 +1,6 @@
 package controller;
 
-import model.Player;
+import model.gamer.Player;
 import model.card.CardDeck;
 import java.util.List;
 

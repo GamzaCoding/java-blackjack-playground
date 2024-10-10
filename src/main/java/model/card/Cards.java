@@ -17,6 +17,10 @@ public class Cards {
         cards.add(card);
     }
 
+    public List<Card> getCards() {
+        return cards;
+    }
+
     public int size(){
         return cards.size();
     }
