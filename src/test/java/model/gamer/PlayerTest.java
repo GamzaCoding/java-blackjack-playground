@@ -1,4 +1,4 @@
-package model;
+package model.gamer;
 
 import model.card.CardDeck;
 import model.card.Cards;
@@ -17,7 +17,7 @@ public class PlayerTest {
     private CardDeck deck;
     @BeforeEach
     public void setUP(){
-        this.player = new Player("seok", new Amount(10000));
+        this.player = new Player("seok");
         this.deck = new CardDeck();
     }
 
@@ -33,7 +33,7 @@ public class PlayerTest {
     @DisplayName("배팅 수익 추가 기능 테스트")
     public void addRevenue(){
         Player resultPlayer = player.setBettingResult(20000);
-        assertThat(resultPlayer.getAmount()).isEqualTo(30000);
+        assertThat(resultPlayer.getAmount()).isEqualTo(20000);
     }
     @Test
     @DisplayName("카드 2장 드로우 기능 테스트")

@@ -1,15 +1,16 @@
 package model.gamer;
-
 import model.card.CardDeck;
-import model.card.Cards;
-import model.gamer.Hand;
 
-public class Dealer {
+public class Dealer extends AbstractGamer {
     private final Hand hand;
     private final Amount amount;
     public Dealer(){
-        this.hand = new Hand(new Cards());
         this.amount = new Amount(0);
+        this.hand = new Hand();
+    }
+    private Dealer(Amount resultAmount, Hand hand){
+        this.amount = resultAmount;
+        this.hand = hand;
     }
     public void drawTowCard(CardDeck cardDeck) {
         hand.add(cardDeck.draw());
@@ -17,6 +18,11 @@ public class Dealer {
     }
     public void drawOneCard(CardDeck cardDeck){
         hand.add(cardDeck.draw());
+    }
+    @Override
+    public Dealer setBettingResult(final int revenue){
+        Amount total = amount.addRevenue(revenue);
+        return new Dealer(total, hand);
     }
 
 }

@@ -4,7 +4,7 @@ import java.util.regex.Pattern;
 
 public class Name {
 
-    private static final Pattern NAME_PATTERN = Pattern.compile("^[0-9a-zA-Zㄱ-ㅎ가-힣]*$");
+    private static final Pattern NAME_PATTERN = Pattern.compile("^[a-z|A-Z|ㄱ-ㅎ|가-힣| ]*$");
     private static final String NOT_ALLOWED_NAME_FORMAT = "이름은 한글과 영어만 허용합니다. 이름을 다시 입력해주세요";
 
     private String name;

@@ -6,8 +6,8 @@ import model.card.Cards;
 public class Hand {
 
     private Cards cards;
-    public Hand(Cards cards){
-        this.cards = cards;
+    public Hand(){
+        this.cards = new Cards();
     }
     public void add(Card card){
         cards.addCard(card);
