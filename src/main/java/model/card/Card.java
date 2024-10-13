@@ -14,6 +14,10 @@ public class Card {
         return value;
     }
 
+    public String getValueAndEmblem(){
+        return value.getValue() + emblem.getEmblemName();
+    }
+
     public static Card of(Emblem emblem, Value value){
         return new Card(emblem, value);
     }

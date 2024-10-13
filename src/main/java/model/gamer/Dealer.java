@@ -1,5 +1,6 @@
 package model.gamer;
 import model.card.CardDeck;
+import model.card.Cards;
 
 public class Dealer extends AbstractGamer {
     private final Hand hand;
@@ -18,6 +19,9 @@ public class Dealer extends AbstractGamer {
     }
     public void drawOneCard(CardDeck cardDeck){
         hand.add(cardDeck.draw());
+    }
+    public Cards getDealerCards() {
+        return hand.getCards();
     }
     @Override
     public Dealer setBettingResult(final int revenue){
