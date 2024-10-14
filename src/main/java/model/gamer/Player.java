@@ -28,10 +28,6 @@ public class Player extends AbstractGamer {
         return amount.getAmount();
     }
 
-    public Cards getPlayerCards() {
-        return hand.getCards();
-    }
-
     public String getName() {
         return name.getName();
     }

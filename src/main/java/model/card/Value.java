@@ -22,4 +22,8 @@ public enum Value {
     public String getValue() {
         return value;
     }
+
+    public Integer getValuePoint(){
+        return Integer.parseInt(value);
+    }
 }

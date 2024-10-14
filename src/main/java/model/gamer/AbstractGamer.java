@@ -1,6 +1,7 @@
 package model.gamer;
 
 import model.card.CardDeck;
+import model.card.Cards;
 
 public abstract class AbstractGamer {
     protected Hand hand;
@@ -15,6 +16,10 @@ public abstract class AbstractGamer {
 
     public void drawOneCard(CardDeck cardDeck){
         hand.add(cardDeck.draw());
+    }
+
+    public Cards getGamerCards() {
+        return hand.getCards();
     }
 
     abstract AbstractGamer setBettingResult(int revenue);

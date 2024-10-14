@@ -6,6 +6,8 @@ public class OutputView {
     private static final String CARD_OF = "카드: ";
     private static final String DEALER = "딜러 ";
     private static final String BLANK = " ";
+    private static final String RESULT = " - 결과: ";
+    private static final String DEALER_UNDER_SIXTEEN = "딜러는 16이하라 한장의 카드를 더 받았습니다.";
 
     public void announceTwoCardSituation(String playersName){
         System.out.println(WITH_DEALER + playersName + ANNOUNCE_TWO_CARD_SITUATION);
@@ -22,6 +24,20 @@ public class OutputView {
     public void printBlank(){
         System.out.println(BLANK);
     }
+
+    public void printDealerUnderSixteenMessage(){
+        System.out.println(DEALER_UNDER_SIXTEEN);
+    }
+
+    public void printDealerResult(String cards, int score){
+        System.out.println(DEALER + CARD_OF + cards + RESULT + score);
+    }
+
+    public void printPlayerResult(String name, String cards, int score){
+        System.out.println(name + CARD_OF + cards + RESULT + score);
+    }
+
+
 
 }
 
